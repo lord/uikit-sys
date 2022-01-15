@@ -1,7 +1,3 @@
-[workspace]
-members = [
-    "ios-example/"
-]
 [package]
 name = "uikit-sys"
 version = "0.0.1"
@@ -14,35 +10,9 @@ categories = ["gui", "uikit", "ios"]
 license = "Apache-2.0"
 description = "UIKit bindings for iOS"
 
-[package.metadata.bundle.example.rect]
-name = "rect"
-identifier = "com.github.simlay.uikit-sys.rect"
-category = "Utility"
-short_description = "An example of a bundled application"
-long_description = """
-A trivial application that just displays a blank window with
-a title bar.  It serves as an example of an application that
-can be bundled with cargo-bundle, as well as a test-case for
-cargo-bundle's support for bundling crate examples.
-"""
-#icon = ["examples/hello/icon*.png"]
-
-
-[build-dependencies.bindgen]
-default-features = false
-git = "https://github.com/simlay/rust-bindgen.git"
-branch = "objc-category-inheritance"
-#version = "0.54.1"
-#path = "../../rust-bindgen/"
-
-[target.'cfg(target_os = "ios")'.dependencies]
+[dependencies]
 objc = "0.2.7"
 block = "0.1.6"
 
-[dev-dependencies]
-#winit = "0.22.0"
-winit = { git = "https://github.com/rust-windowing/winit" }
-log = "0.4"
-pretty_env_logger = "0.3"
-color-backtrace = "0.2.3"
-env_logger = "0.7"
+[build-dependencies]
+bindgen = "0.59.2"
