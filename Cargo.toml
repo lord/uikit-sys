@@ -2,7 +2,7 @@
 name = "uikit-sys"
 version = "0.0.1"
 authors = ["Sebastian Imlay <sebastian.imlay@gmail.com>"]
-edition = "2018"
+edition = "2021"
 keywords = ["ios", "uikit", "bindgen"]
 repository = "https://github.com/simlay/uikit-sys"
 documentation = "https://simlay.github.io/uikit-sys"
@@ -12,7 +12,6 @@ description = "UIKit bindings for iOS"
 
 [dependencies]
 objc = "0.2.7"
-block = "0.1.6"
 
 [build-dependencies]
 bindgen = "0.59.2"
